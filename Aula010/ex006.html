@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 15pt Arial;
+            background-color: darkgreen;
+            color: ghostwhite;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    
+    <script>
+        var a = window.document.getElementById('area');
+        //Outra maneira de colocar eventos em algum elemento, sem que seja na HTML (colocando o evento "OnClick" = "click", e o nome da função)
+        a.addEventListener('click', clicar );
+        a.addEventListener('mouseout', sair);
+
+        function clicar() {
+            a.innerText = "Clicou"
+            a.style.background = "black"
+        }
+
+        function sair() {
+            a.innerText = "Saiu"
+            a.style.background = "purple"
+        }
+        
+    </script>
+</body>
+</html>
